@@ -6,6 +6,7 @@
   - [Prerequisites](#prerequisites)
   - [Set up](#set-up)
   - [Preview Project](#preview-project)
+- [Learning](#learning)
 
 ## Getting Started
 
@@ -48,3 +49,5 @@
 
     export default App;
     ```
+
+## Learning
