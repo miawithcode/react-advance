@@ -58,6 +58,8 @@
 | Topic | Project |
 |---|---|
 | useState | [Counter](./src/project/01-useState/Counter.jsx) |
+| useState | [List](./src/project/01-useState/List.jsx) |
+| useState | [Object](./src/project/01-useState/Object.jsx) |
 
 ## Learning
 
