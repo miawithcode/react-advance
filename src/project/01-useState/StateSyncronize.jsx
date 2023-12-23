@@ -5,10 +5,11 @@ const Form = () => {
   const [value, setValue] = useState(0);
 
   const handleClick = () => {
-    setValue((prevState) => {
-    const newState = prevState + 1;
-    return newState;
-    });
+    setTimeout(() => {
+      setValue((prevState) => {
+        return prevState + 1;
+      });
+    }, 3000)
 }
 
   return (
