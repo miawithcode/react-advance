@@ -8,13 +8,12 @@ const Counter = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-8">
-      <h2 className="text-6xl">
-        You clicked <span className=" text-blue-500 ">{count}</span> times
+    <div>
+      <h2>
+        You clicked {count} times
       </h2>
       <button
         type="button"
-        className=" cursor-pointer rounded-md bg-blue-500 px-4 py-2 font-bold text-white transition duration-300 hover:translate-y-[-3px] hover:bg-blue-600 "
         onClick={handleClick}
       >
         Increase
