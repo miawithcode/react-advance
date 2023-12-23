@@ -83,3 +83,21 @@ React提供了一系列内置的Hooks，例如useState、useEffect、useContext�
    const [count, setCount] = useState(0);
    ```
 3. State Value 会由在`set`函数中提供的值改变。每一次用 `set` 函数改变 State Value 的值时，会触发 re-render
+4. state value 会有延迟
+  ```jsx
+      setValue( value + 1 );
+      console.log(value); // 当页面中显示 3 时，console 中只能显示 2
+  ```
+5. 如何获取最新的 state value ？
+   ```jsx
+    //
+    // const handleClick = () => {
+    // setValue((prevState) => {
+    // const newState = prevState + 1;
+    // return newState;
+    // });
+    
+    setValue((prevState) => {
+      return {...prevState, value: newState};
+    })
+   ```
