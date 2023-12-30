@@ -16,6 +16,7 @@ React notes of React projects.
   - [useEffect](#useeffect-1)
   - [Fetch Data](#fetch-data)
   - [Fetch Error](#fetch-error)
+  - [Condition](#condition)
 
 ## Getting Started
 
@@ -172,3 +173,24 @@ function App() {
 ### Fetch Error
 
 Fetch 和 Axios 在处理错误时有一些不同。Fetch 不像 Axios 能直接地处理 HTTP 错误状态码，Fetch 不会在 HTTP 错误状态码（如 404 或 500）时拒绝 Promise，而是会将错误状态码视为 success request，并将 `ok` 属性设置为 `false`
+
+### Condition
+
+React Hooks 不能放在条件判断之后。
+Hooks need to be called in the same order.
+
+```jsx
+const Example = () => {
+  const [condition, setCondition] = useEffect(true);
+
+  if(condition) {
+    // won't work
+    const [state, useState] = useState(false);
+  }
+
+  useEffect(() => {
+    // this will also fail
+    console.log("Hello World");
+  }, [])
+}
+```
