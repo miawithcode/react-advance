@@ -5,17 +5,38 @@ const ShortCircuit = () => {
   const [text, setText] = useState('');
   // Truthy
   const [name, setName] = useState('susan');
-
-  const codeExample = text || 'Hello World';
+  const [user, setUser] = useState({name: 'john'});
+  const [isEditing, setIsEditing] = useState(false);
 
   return (
     <div>
-      <h4>Falsy OR : {text || 'Hello World'}</h4>
-      <h4>Falsy AND : {text && 'Hello World'}</h4>
-      <h4>Truthy OR : {name || 'Hello World'}</h4>
-      <h4>Truthy AND : {name && 'Hello World'}</h4>
-      {codeExample}
+      <h2>{text || 'default value'}</h2>
+      {text && (
+        <div>
+          <h2>Whatever Return</h2>
+          <h4>{name}</h4>
+        </div>
+      )}
+      {/* {!text && (
+        <div>
+          <h2>Whatever Return</h2>
+          <h4>{name}</h4>
+        </div>
+      )} */}
+
+      {user && <SomeComponent name={user.name} />}
+
     </div>
   );
 };
+
+const SomeComponent = ({ name }) => {
+  return (
+    <div>
+      <h2>Component</h2>
+      <h4>{name}</h4>
+    </div>
+  );
+}
+
 export default ShortCircuit;

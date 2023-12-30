@@ -81,7 +81,7 @@ React notes of React projects.
 | Project | Description | What does it cover |
 |---|---|---|
 | [Multiple Returns](./src/project/03-conditional-rendering/MultipleReturns.jsx) | 加载数据时显示 Loading，数组加载完成后显示数据 | useEffect 的 common use |
-| [Short Circuit](./src/project/03-conditional-rendering/ShortCircuit.jsx) |  | JSX 中不能用 `if`条件句判断显示什么内容，但可以用 `\|\|` 和 `&&` 做条件判断 |
+| [Short Circuit](./src/project/03-conditional-rendering/ShortCircuit.jsx) | 控制页面中显示的内容 | JSX 中不能用 `if`条件句判断显示什么内容，但可以用 `\|\|` 和 `&&` 做条件判断 |
 
 ## Learning
 
@@ -194,4 +194,15 @@ const Example = () => {
     console.log("Hello World");
   }, [])
 }
+```
+
+### Short Circuit
+
+1. 如果 `text` 存在，显示 `text` 的值；如果 `text` 不存在，显示默认值 `default value`。
+    ```jsx
+    <h2>{text || 'default value'}</h2>
+    ```
+2. 如果 `user` 不存在，什么都不显示，如果 `user` 存在，显示一个组件。
+```jsx
+{user && <SomeComponent />}
 ```
