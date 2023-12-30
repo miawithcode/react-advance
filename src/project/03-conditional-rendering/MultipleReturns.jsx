@@ -36,14 +36,16 @@ const MultipleReturns = () => {
     return <h2>There was an error</h2>;
   }
 
+  const {avatar_url, name, bio} = user; // This line of code must be placed after condition check
+
   return (
     <section>
       <img
         style={({ width: '150px' ,borderRadius: '50%' })}
-        src={user.avatar_url}
+        src={avatar_url}
       ></img>
-      <h3>{user.name}</h3>
-      <p>Bio: {user.bio}</p>
+      <h3>{name}</h3>
+      <p>Bio: {bio}</p>
     </section>
   );
 };
