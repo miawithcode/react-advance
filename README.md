@@ -169,6 +169,7 @@ function App() {
           console.log("Hello World");
         }, [])
         ```
+5. [You Might Not Need an Effect](https://react.dev/learn/you-might-not-need-an-effect)
 
 ### Fetch Data
 
