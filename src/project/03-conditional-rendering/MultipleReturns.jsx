@@ -11,7 +11,13 @@ const MultipleReturns = () => {
     const fetchUser = async () => {
       try {
         const response = await fetch(url);
+        if(!response.ok) {
+          setIsError(true);
+          setIsLoading(false);
+          return
+        }
         const user = await response.json();
+        console.log(user);
         setUser(user);
       } catch (error) {
         setIsError(true);
@@ -37,7 +43,7 @@ const MultipleReturns = () => {
         src={user.avatar_url}
       ></img>
       <h3>{user.name}</h3>
-      <p>{user.bio}</p>
+      <p>Bio: {user.bio}</p>
     </section>
   );
 };
