@@ -1,4 +1,4 @@
-import Project from "./project/02-useEffect/";
+import Project from "./project/02-useEffect/FetchData";
 
 function App() {
 
