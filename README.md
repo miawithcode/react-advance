@@ -9,9 +9,10 @@ React notes of React projects.
   - [Preview Project](#preview-project)
 - [Project](#project)
   - [useState](#usestate)
-- [Learning React Hooks](#learning-react-hooks)
+  - [useEffect](#useeffect)
+- [Learning](#learning)
   - [useState](#usestate-1)
-    - [异步更新](#异步更新)
+  - [useEffect](#useeffect-1)
 
 ## Getting Started
 
@@ -65,9 +66,11 @@ React notes of React projects.
 | [Object](./src/project/01-useState/Object.jsx) | 显示人物信息，信息是存放在 Obeject 中的属性 | 对 Object 使用 `useState`，需要用到展开运算符`...` |
 | [StateSyncronize](./src/project/01-useState/StateSyncronize.jsx) | 状态变量是异步更新的，要获取最新的状态变量值，要用 `setValue((prevState) => { return ...; });` |
 
-## Learning React Hooks
+### useEffect
 
-React提供了一系列内置的Hooks，例如useState、useEffect、useContext、useReducer等
+## Learning
+
+React 提供了一系列内置的 Hooks，例如 useState、useEffect、useContext、useReducer等
 
 1. Hook 都用 `use` 开头
 2. 需要在函数体或组件里调用
@@ -85,16 +88,13 @@ React提供了一系列内置的Hooks，例如useState、useEffect、useContext�
    const [count, setCount] = useState(0);
    ```
 3. State Value 会由在`set`函数中提供的值改变。每一次用 `set` 函数改变 State Value 的值时，会触发 re-render
-
-#### 异步更新
-
-1. State Value 是异步更新的。这意味着当调用状态更新函数时，React不会立即更新状态变量的值，而是在稍后的某个时间点进行更新。这可能会导致在异步操作中无法立即获取到最新的状态变量值。
-  ```jsx
-      setValue( value + 1 );
-      console.log(value); // 当页面中显示 3 时，console 中只能显示 2
-  ```
-2. 使用回调函数确保在状态更新完成后再执行后续操作
-     ```jsx
+4. State Value 是异步更新的。这意味着当调用状态更新函数时，React不会立即更新状态变量的值，而是在稍后的某个时间点进行更新。这可能会导致在异步操作中无法立即获取到最新的状态变量值。
+    ```jsx
+        setValue( value + 1 );
+        console.log(value); // 当页面中显示 3 时，console 中只能显示 2
+    ```
+5. 要获取最新的状态变量的值，则使用回调函数确保在状态更新完成后再执行后续操作：
+    ```jsx
     // setValue((prevState) => {
     //  return {...prevState, value: newState};
     // })
@@ -104,8 +104,47 @@ React提供了一系列内置的Hooks，例如useState、useEffect、useContext�
     // return newState; 
     // }
     
-    setValye((prevState) => {
+    setValue((prevState) => {
       return prevState + 1;
     })
+    ```
 
-     ```
+### useEffect
+
+```jsx
+function App() {
+
+  // 在这个位置调用的函数会在每一次 render 和 re-render 的时候运行
+
+  return ...;
+}
+```
+
+1. `useEffect` 允许在函数组件中执行副作用操作，通常包括**订阅更新**（subscription）, **获取数据**（fetching data）, **更新 DOM**（directly updating the DOM）, **监听事件**（event listeners）, **计时器**（timers）等。
+2. `useEffect`接受2个参数：
+   1. 第一个是回调函数，用于执行副作用操作。这个回调函数会在组件渲染后执行。
+   2. 第二个是依赖数组（可选）。这个依赖数组用于指定在依赖项发生变化时才执行副作用操作。
+3. `useEffect`接受第一个回调函数参数不可以是`async`，也就是 `useEffect` 不能返回 Promise。但是在回调函数中定义一个 `async` 函数并运行是可以接受的。
+    ```jsx
+    useEffect(async () => {}, []) // X
+
+    useEffect(() => {
+      const someFunc = async () => { // √
+        await ...
+      }
+      someFunc();
+    }, [])
+    ```
+4. 依赖数组（Dependancy Array）
+   1. 如果不传入依赖数组，useEffect 将在每次组件渲染后都执行副作用操作。
+        ```jsx
+        useEffect(()=>{
+          console.log("Hello World"); // 每次组件渲染后都会执行
+        })
+        ```
+    2. 如果传入空的依赖数组，useEffect 只会在页面第一次加载（Initial Render）的时候执行副作用操作。
+        ```jsx
+        useEffect(()=>{
+          console.log("Hello World");
+        }, [])
+        ```

@@ -1,4 +1,4 @@
-import Project from "./project/";
+import Project from "./project/02-useEffect/";
 
 function App() {
 
