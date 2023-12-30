@@ -1,4 +1,4 @@
-import Project from "./project/03-conditional-rendering/TernaryOperator";
+import Project from "./project/03-conditional-rendering/ToggleComponent";
 
 function App() {
 
