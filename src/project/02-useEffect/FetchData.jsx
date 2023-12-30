@@ -11,7 +11,6 @@ const FetchData = () => {
         const response = await fetch(url);
         const users = await response.json();
         setUsers(users);
-        console.log(users);
       } catch (error) {
         console.log(error);
       }
@@ -25,7 +24,6 @@ const FetchData = () => {
       <ul>
         {users.map((user) => {
           const { id, login, html_url, avatar_url } = user;
-          console.log(user);
           return (
             <li key={id}>
               <img src={avatar_url} alt={login} style={{ width: '100px' }} />
