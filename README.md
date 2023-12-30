@@ -13,6 +13,7 @@ React notes of React projects.
   - [Conditional Rendering](#conditional-rendering)
 - [Learning](#learning)
   - [useState](#usestate-1)
+  - [onClick](#onclick)
   - [useEffect](#useeffect-1)
   - [Fetch Data](#fetch-data)
   - [Fetch Error](#fetch-error)
@@ -129,6 +130,14 @@ React 提供了一系列内置的 Hooks，例如 useState、useEffect、useConte
       return prevState + 1;
     })
     ```
+
+### onClick
+
+在按钮点击时，调用某个函数：
+1. 如果不需要传递参数，`onClick={someFunc}`
+2. 如果需要传递参数，用箭头函数，`onClick={() => someFunc(parameter)}`
+
+常见的错误在于用 `onClick={someFunc()}` 或 `onClick={someFunc(parameter)}`，这些写法都是错的，这会在渲染组件时就调用函数，而不是当按钮点击时才调用。正确的做法是直接传递函数引用，而不是函数调用的结果。
 
 ### useEffect
 
