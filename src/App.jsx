@@ -1,4 +1,4 @@
-import Project from "./project/01-useState/BirthdayBuddy";
+import Project from "./project/";
 
 function App() {
 
