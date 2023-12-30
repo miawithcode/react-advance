@@ -1,4 +1,4 @@
-import Project from "./project/03-conditional-rendering/MultipleReturns";
+import Project from "./project/03-conditional-rendering/ShortCircuit";
 
 function App() {
 

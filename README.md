@@ -81,6 +81,7 @@ React notes of React projects.
 | Project | Description | What does it cover |
 |---|---|---|
 | [Multiple Returns](./src/project/03-conditional-rendering/MultipleReturns.jsx) | 加载数据时显示 Loading，数组加载完成后显示数据 | useEffect 的 common use |
+| [Short Circuit](./src/project/03-conditional-rendering/ShortCircuit.jsx) |  | JSX 中不能用 `if`条件句判断显示什么内容，但可以用 `\|\|` 和 `&&` 做条件判断 |
 
 ## Learning
 
