@@ -10,9 +10,11 @@ React notes of React projects.
 - [Project](#project)
   - [useState](#usestate)
   - [useEffect](#useeffect)
+  - [Conditional Rendering](#conditional-rendering)
 - [Learning](#learning)
   - [useState](#usestate-1)
   - [useEffect](#useeffect-1)
+  - [Fetch Data](#fetch-data)
 
 ## Getting Started
 
@@ -64,13 +66,19 @@ React notes of React projects.
 | [Counter](./src/project/01-useState/Counter.jsx) | useState 的基本用法 | 点击按钮简单计数 |
 | [List](./src/project/01-useState/List.jsx) | 删除列表的某条记录，或者清除整个列表 | 用 `map()` 遍历数组中的每个元素，对每个元素的属性执行一定操作，返回相关的HTML元素。**使用场景**：和数据相关的列表 |
 | [Object](./src/project/01-useState/Object.jsx) | 显示人物信息，信息是存放在 Obeject 中的属性 | 对 Object 使用 `useState`，需要用到展开运算符`...` |
-| [StateSyncronize](./src/project/01-useState/StateSyncronize.jsx) | 状态变量是异步更新的，要获取最新的状态变量值，要用 `setValue((prevState) => { return ...; });` |
+| [StateSyncronize](./src/project/01-useState/StateSyncronize.jsx) |  | 状态变量是异步更新的，要获取最新的状态变量值，要用 `setValue((prevState) => { return ...; });` |
 
 ### useEffect
 
 | Project | Description | What does it cover |
 |---|---|---|
-| Fetch Data | 从 GitHub API 中获取数据加载用户列表 | 用 `useEffect` 从 API 中 fetch 数据
+| [Fetch Data](./src/project/02-useEffect/FetchData.jsx) | 从 GitHub API 中获取数据加载用户列表 | 用 `useEffect` 从 API 中 fetch 数据
+
+### Conditional Rendering
+
+| Project | Description | What does it cover |
+|---|---|---|
+| [Multiple Returns](./src/project/03-conditional-rendering/MultipleReturns.jsx) | 加载数据时显示 Loading，数组加载完成后显示数据 | useEffect 的 common use |
 
 ## Learning
 
@@ -152,3 +160,10 @@ function App() {
           console.log("Hello World");
         }, [])
         ```
+
+### Fetch Data
+
+获取数据有3种状态，需要根据不同的状态来动态显示页面内容。
+1. loading - 等待数据（display loading state）
+2. error - 获取数据的过程中出错（display error message）
+3. success - 收到数据（display data）
