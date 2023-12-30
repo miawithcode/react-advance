@@ -1,4 +1,4 @@
-import Project from "./project/03-conditional-rendering/ToggleComponent";
+import Project from "./project/03-conditional-rendering/User";
 
 function App() {
 
