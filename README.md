@@ -76,7 +76,8 @@ React notes of React projects.
 
 | Project | Description | What does it cover |
 |---|---|---|
-| [Fetch Data](./src/project/02-useEffect/FetchData.jsx) | 从 GitHub API 中获取数据加载用户列表 | 用 `useEffect` 从 API 中 fetch 数据
+| [Fetch Data](./src/project/02-useEffect/FetchData.jsx) | 从 GitHub API 中获取数据加载用户列表 | 用 `useEffect` 从 API 中 fetch 数据|
+| [Cleanup Function](./src/project/02-useEffect/CleanupFucntion.jsx) |  | 在一个组件中加载另一个有 `useEffect` 的组件时，即使设置了 `useEffect` 只在页面加载的时候执行一次，但从第一个组件中有条件地加载这个组件时，`useEffect` 在组件显示的每一次都会执行 |
 
 ### Conditional Rendering
 

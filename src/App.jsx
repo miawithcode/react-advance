@@ -1,4 +1,4 @@
-import Project from "./project/03-conditional-rendering/User";
+import Project from "./project/02-useEffect/CleanupFucntion";
 
 function App() {
 
