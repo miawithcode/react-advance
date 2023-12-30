@@ -86,6 +86,7 @@ React notes of React projects.
 | [Short Circuit](./src/project/03-conditional-rendering/ShortCircuit.jsx) | 控制页面中显示的内容 | JSX 中不能用 `if`条件句判断显示什么内容，但可以用 `\|\|` 和 `&&` 做条件判断 |
 | [Ternary Operator](./src/project/03-conditional-rendering/TernaryOperator.jsx) | 控制页面中显示的内容 | 用 `condition?expression1:expression2`做条件判断动态显示页面元素 |
 | [Toggle Component](./src/project/03-conditional-rendering/ToggleComponent.jsx) | 点击按钮显示组件，再次点击按钮不显示组件 |  |
+| [User](./src/project/03-conditional-rendering/User.jsx) | 用户登录时显示登出按钮和问好信息，用户登出时显示登录提示信息和登录按钮 |  |
 
 ## Learning
 
