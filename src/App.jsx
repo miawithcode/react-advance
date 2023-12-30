@@ -1,4 +1,4 @@
-import Project from "./project/03-conditional-rendering/ShortCircuit";
+import Project from "./project/03-conditional-rendering/TernaryOperator";
 
 function App() {
 

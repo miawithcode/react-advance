@@ -6,7 +6,6 @@ const ShortCircuit = () => {
   // Truthy
   const [name, setName] = useState('susan');
   const [user, setUser] = useState({name: 'john'});
-  const [isEditing, setIsEditing] = useState(false);
 
   return (
     <div>

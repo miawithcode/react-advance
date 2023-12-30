@@ -17,6 +17,8 @@ React notes of React projects.
   - [Fetch Data](#fetch-data)
   - [Fetch Error](#fetch-error)
   - [Condition](#condition)
+  - [Short Circuit](#short-circuit)
+  - [Ternary Operator](#ternary-operator)
 
 ## Getting Started
 
@@ -206,3 +208,7 @@ const Example = () => {
 ```jsx
 {user && <SomeComponent />}
 ```
+
+### Ternary Operator
+
+> condition ? expression1 : expression2
