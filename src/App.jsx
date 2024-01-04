@@ -1,4 +1,4 @@
-import Project from "./project/02-useEffect/CleanupFucntion";
+import Project from "./project/04-leverage-javascript/List"
 
 function App() {
 

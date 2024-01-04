@@ -20,6 +20,7 @@ React notes of React projects.
   - [Condition](#condition)
   - [Short Circuit](#short-circuit)
   - [Ternary Operator](#ternary-operator)
+  - [Leverage JavaScript](#leverage-javascript)
 
 ## Getting Started
 
@@ -226,3 +227,12 @@ const Example = () => {
 ### Ternary Operator
 
 > condition ? expression1 : expression2
+
+### Leverage JavaScript
+
+> How we can use JavaScript to fix issues if the data is missing
+
+1. Option Chaining
+   ```jsx
+  
+   ```
