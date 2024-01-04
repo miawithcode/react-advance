@@ -232,7 +232,7 @@ const Example = () => {
 
 > How we can use JavaScript to fix issues if the data is missing
 
-1. Option Chaining
+1. Optional Chaining
    ```jsx
-  
+  prop?.prop?.prop
    ```
