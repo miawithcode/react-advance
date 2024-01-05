@@ -4,8 +4,13 @@ const ControlledInputs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // do something
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h4>Controlled Inputs</h4>
       <div>
         <label htmlFor="name">name</label>
