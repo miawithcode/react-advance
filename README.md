@@ -11,6 +11,7 @@ React notes of React projects.
   - [useState](#usestate)
   - [useEffect](#useeffect)
   - [Conditional Rendering](#conditional-rendering)
+- [Forms](#forms)
 - [Learning](#learning)
   - [useState](#usestate-1)
   - [onClick](#onclick)
@@ -21,6 +22,7 @@ React notes of React projects.
   - [Short Circuit](#short-circuit)
   - [Ternary Operator](#ternary-operator)
   - [Leverage JavaScript](#leverage-javascript)
+  - [Input](#input)
 
 ## Getting Started
 
@@ -90,6 +92,11 @@ React notes of React projects.
 | [Ternary Operator](./src/project/03-conditional-rendering/TernaryOperator.jsx) | 控制页面中显示的内容 | 用 `condition?expression1:expression2`做条件判断动态显示页面元素 |
 | [Toggle Component](./src/project/03-conditional-rendering/ToggleComponent.jsx) | 点击按钮显示组件，再次点击按钮不显示组件 |  |
 | [User](./src/project/03-conditional-rendering/User.jsx) | 用户登录时显示登出按钮和问好信息，用户登出时显示登录提示信息和登录按钮 |  |
+
+## Forms
+| Project | Description | What does it cover |
+|---|---|---|
+| [Controlled Inputs](./src/project/05-forms/ControlledInputs.jsx) |  | 提到 Controlled Inputs 的时候，说明有一个状态变量，代表所有的 input，或者每一个 input 都有对应的状态变量，改变 input 中的值时，会自动改变状态变量中的值，input 也会反映状态变量中的值 |
 
 ## Learning
 
@@ -236,3 +243,24 @@ const Example = () => {
    ```jsx
   prop?.prop?.prop
    ```
+
+### Input
+
+1. 想要 control inputs，需要添加`value`和`onChange`
+    ```jsx
+    // value 的值为状态变量
+    // onChange 的值为 handleChange 函数
+    <input type="text" id="name" value={name} onChange={handleChange} />
+    ```
+2. 设置 `handleChange` 函数，这个函数 right away have access to `event` object
+    ```jsx
+    // event object 中最有用的两个属性
+    // event.target.name 和 event.target.value
+    const handleChange = (e) => {
+      setName(e.target.value);
+    }
+  ```
+3. 或者不用 `handleChange` 函数，直接在 `onChange` 中写箭头函数
+    ```jsx
+    <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+    ```
