@@ -97,6 +97,7 @@ React notes of React projects.
 | Project | Description | What does it cover |
 |---|---|---|
 | [Controlled Inputs](./src/project/05-forms/ControlledInputs.jsx) |  | 提到 Controlled Inputs 的时候，说明有一个状态变量，代表所有的 input，或者每一个 input 都有对应的状态变量，改变 input 中的值时，会自动改变状态变量中的值，input 也会反映状态变量中的值 |
+| [Add User](./src/project/05-forms/AddUser.jsx) | 点击提交按钮添加 input 中输入的 user name，以及移除 user |  |
 
 ## Learning
 

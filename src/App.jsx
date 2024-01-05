@@ -1,4 +1,4 @@
-import Project from "./project/05-forms/ControlledInputs"
+import Project from "./project/05-forms/AddUser"
 
 function App() {
 
