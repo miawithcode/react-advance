@@ -20,6 +20,11 @@ const AddUser = () => {
     setName('');
   };
 
+  const handleDelete = (id) => {
+    const newUsers = users.filter((person) => person.id !== id);
+    setUsers(newUsers);
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -38,7 +43,12 @@ const AddUser = () => {
       <div>
         <h4>Users</h4>
         {users.map((user) => {
-          return <p key={user.id}>{user.name}</p>;
+          return (
+            <div key={user.id}>
+              <p>{user.name}</p>
+              <button type='button' onClick={() => handleDelete(user.id)}>delete</button>
+            </div>
+          );
         })}
       </div>
     </div>
