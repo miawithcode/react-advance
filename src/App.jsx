@@ -1,4 +1,4 @@
-import Project from "./project/04-leverage-javascript/List"
+import Project from "./project/05-forms/ControlledInputs"
 
 function App() {
 
