@@ -102,6 +102,7 @@ React notes of React projects.
 输入的 user name，以及移除 user |  |
 | [Checkbox Inputs](./src/project/05-forms/CheckboxInput.jsx) |  | 设置 `checked` 属性为状态变量 |
 | [Select Inputs](./src/project/05-forms/CheckboxInput.jsx) |  | 设置 `value` 属性为状态变量，选项中的内容通常来自 API |
+| [Uncontrolled Inputs (FormData)](./src/project/05-forms/FormData.jsx) | FormData 是用来轻松收集和发送表单数据的一种方式，使用 FormData 的好处是不需要手动读取每个表单元素的值 | 使用 FormData 时，input 必须有 `name` 属性 |
 
 ## Learning
 
