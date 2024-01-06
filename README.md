@@ -11,7 +11,7 @@ React notes of React projects.
   - [useState](#usestate)
   - [useEffect](#useeffect)
   - [Conditional Rendering](#conditional-rendering)
-- [Forms](#forms)
+  - [Forms](#forms)
 - [Learning](#learning)
   - [useState](#usestate-1)
   - [onClick](#onclick)
@@ -93,11 +93,12 @@ React notes of React projects.
 | [Toggle Component](./src/project/03-conditional-rendering/ToggleComponent.jsx) | 点击按钮显示组件，再次点击按钮不显示组件 |  |
 | [User](./src/project/03-conditional-rendering/User.jsx) | 用户登录时显示登出按钮和问好信息，用户登出时显示登录提示信息和登录按钮 |  |
 
-## Forms
+### Forms
 | Project | Description | What does it cover |
 |---|---|---|
 | [Controlled Inputs](./src/project/05-forms/ControlledInputs.jsx) |  | 提到 Controlled Inputs 的时候，说明有一个状态变量，代表所有的 input，或者每一个 input 都有对应的状态变量，改变 input 中的值时，会自动改变状态变量中的值，input 也会反映状态变量中的值 |
 | [Add User](./src/project/05-forms/AddUser.jsx) | 点击提交按钮添加 input 中输入的 user name，以及移除 user |  |
+| [Multiple Inputs](./src/project/05-forms/MultipleInputs.jsx) |  | setup one state value for multiple inputs，将状态变量设置成一个 object |
 
 ## Learning
 
