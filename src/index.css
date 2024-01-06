@@ -23,7 +23,7 @@ form label {
   letter-spacing: 1px;
 }
 
-form input {
+form input:not(:checkbox) {
   display: block;
   width: 100%;
   height: 2rem;
