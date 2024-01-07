@@ -109,6 +109,7 @@ React notes of React projects.
 | Project | Description | What does it cover |
 |---|---|---|
 | [Uncontrolled Inputs (useRef)](./src/project/06-useRef/UncontrolledInput.jsx) | 用 useRef 来获取 input 中的值 | `refContainer` 会 access 到 input，JavaScript 中可以用 `.value` 来获取 input 中的值 ｜
+| [Avoid Functionality](./src/project/06-useRef/AvoidFunctionality.jsx) | 通过改变 useRef 的值，在 initial render 之后不再运行某个功能（在 initial render 时不运行，initial render 后运行） | 因为 useRef 的值是一个 Object，如果要检查 true 或 false，要用到 `current` 属性 ｜
 
 ## Learning
 

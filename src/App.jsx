@@ -1,4 +1,4 @@
-import Project from "./project/06-useRef/UncontrolledInput"
+import Project from "./project/06-useRef/AvoidFunctionality"
 
 function App() {
 
