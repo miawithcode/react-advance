@@ -12,6 +12,7 @@ React notes of React projects.
   - [useEffect](#useeffect)
   - [Conditional Rendering](#conditional-rendering)
   - [Forms](#forms)
+  - [useRef](#useref)
 - [Learning](#learning)
   - [useState](#usestate-1)
   - [onClick](#onclick)
@@ -103,6 +104,11 @@ React notes of React projects.
 | [Checkbox Inputs](./src/project/05-forms/CheckboxInput.jsx) |  | 设置 `checked` 属性为状态变量 |
 | [Select Inputs](./src/project/05-forms/CheckboxInput.jsx) |  | 设置 `value` 属性为状态变量，选项中的内容通常来自 API |
 | [Uncontrolled Inputs (FormData)](./src/project/05-forms/FormData.jsx) | FormData 是用来轻松收集和发送表单数据的一种方式，使用 FormData 的好处是不需要手动读取每个表单元素的值 | 使用 FormData 时，input 必须有 `name` 属性 |
+
+### useRef
+| Project | Description | What does it cover |
+|---|---|---|
+| [Uncontrolled Inputs (useRef)](./src/project/06-useRef/UncontrolledInput.jsx) | 用 useRef 来获取 input 中的值 | `refContainer` 会 access 到 input，JavaScript 中可以用 `.value` 来获取 input 中的值 ｜
 
 ## Learning
 
@@ -270,3 +276,12 @@ const Example = () => {
     ```jsx
     <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
     ```
+
+### useRef
+
+1. `useRef` 不会触发重新渲染
+2. 把 `useRef` 的值想成一个 container
+   ```jsx
+   const refContainer = useRef(null)
+   console.log(refContainer); // Object
+   ```
