@@ -101,7 +101,6 @@ React notes of React projects.
 | [Controlled Inputs](./src/project/05-forms/ControlledInputs.jsx) |  | 提到 Controlled Inputs 的时候，说明有一个状态变量，代表所有的 input，或者每一个 input 都有对应的状态变量，改变 input 中的值时，会自动改变状态变量中的值，input 也会反映状态变量中的值 |
 | [Add User](./src/project/05-forms/AddUser.jsx) | 点击提交按钮添加 input 中输入的 user name，以及移除 user |  |
 | [Multiple Inputs](./src/project/05-forms/MultipleInputs.jsx) |  | setup one state value for multiple inputs，将状态变量设置成一个 object |
-输入的 user name，以及移除 user |  |
 | [Checkbox Inputs](./src/project/05-forms/CheckboxInput.jsx) |  | 设置 `checked` 属性为状态变量 |
 | [Select Inputs](./src/project/05-forms/CheckboxInput.jsx) |  | 设置 `value` 属性为状态变量，选项中的内容通常来自 API |
 | [Uncontrolled Inputs (FormData)](./src/project/05-forms/FormData.jsx) | FormData 是用来轻松收集和发送表单数据的一种方式，使用 FormData 的好处是不需要手动读取每个表单元素的值 | 使用 FormData 时，input 必须有 `name` 属性 |
@@ -109,9 +108,9 @@ React notes of React projects.
 ### useRef
 | Project | Description | What does it cover |
 |---|---|---|
-| [Uncontrolled Inputs (useRef)](./src/project/06-useRef/UncontrolledInput.jsx) | 用 useRef 来获取 input 中的值 | `refContainer` 会 access 到 input，JavaScript 中可以用 `.value` 来获取 input 中的值 ｜
-| [Avoid Functionality](./src/project/06-useRef/AvoidFunctionality.jsx) | 通过改变 useRef 的值，在 initial render 之后不再运行某个功能（在 initial render 时不运行，initial render 后运行） | 因为 useRef 的值是一个 Object，如果要检查 true 或 false，要用到 `current` 属性 ｜
-| [Input Focus](./src/project/06-useRef/InputFocus.jsx) | 页面初始加载时就将 input 设置为 focus状态 |  ｜
+| [Uncontrolled Inputs (useRef)](./src/project/06-useRef/UncontrolledInput.jsx) | 用 useRef 来获取 input 中的值 | `refContainer` 会 access 到 input，JavaScript 中可以用 `.value` 来获取 input 中的值 |
+| [Avoid Functionality](./src/project/06-useRef/AvoidFunctionality.jsx) | 通过改变 useRef 的值，在 initial render 之后不再运行某个功能（在 initial render 时不运行，initial render 后运行） | 因为 useRef 的值是一个 Object，如果要检查 true 或 false，要用到 `current` 属性 |
+| [Input Focus](./src/project/06-useRef/InputFocus.jsx) | 页面初始加载时就将 input 设置为 focus状态 |
 
 ## Learning
 
@@ -135,8 +134,8 @@ React 提供了一系列内置的 Hooks，例如 useState、useEffect、useConte
 3. State Value 会由在`set`函数中提供的值改变。每一次用 `set` 函数改变 State Value 的值时，会触发 re-render
 4. State Value 是异步更新的。这意味着当调用状态更新函数时，React不会立即更新状态变量的值，而是在稍后的某个时间点进行更新。这可能会导致在异步操作中无法立即获取到最新的状态变量值。
     ```jsx
-        setValue( value + 1 );
-        console.log(value); // 当页面中显示 3 时，console 中只能显示 2
+    setValue( value + 1 );
+    console.log(value); // 当页面中显示 3 时，console 中只能显示 2
     ```
 5. 要获取最新的状态变量的值，则使用回调函数确保在状态更新完成后再执行后续操作：
     ```jsx
@@ -242,9 +241,9 @@ const Example = () => {
     <h2>{text || 'default value'}</h2>
     ```
 2. 如果 `user` 不存在，什么都不显示，如果 `user` 存在，显示一个组件。
-```jsx
-{user && <SomeComponent />}
-```
+    ```jsx
+    {user && <SomeComponent />}
+    ```
 
 ### Ternary Operator
 
@@ -255,9 +254,9 @@ const Example = () => {
 > How we can use JavaScript to fix issues if the data is missing
 
 1. Optional Chaining
-   ```jsx
-  prop?.prop?.prop
-   ```
+    ```jsx
+    prop?.prop?.prop
+    ```
 
 ### Input
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const CleanupFucntion = () => {
+const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -33,4 +33,4 @@ const RandomComponent = () => {
   return <h1>Hello There</h1>
 };
 
-export default CleanupFucntion;
+export default CleanupFunction;
