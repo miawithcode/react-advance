@@ -24,6 +24,7 @@ React notes of React projects.
   - [Ternary Operator](#ternary-operator)
   - [Leverage JavaScript](#leverage-javascript)
   - [Input](#input)
+  - [Custom Hooks](#custom-hooks)
 
 ## Getting Started
 
@@ -287,3 +288,9 @@ const Example = () => {
    const refContainer = useRef(null)
    console.log(refContainer); // Object
    ```
+
+### Custom Hooks
+
+1. Custom Hooks 的实现方式是创建一个函数，将组件中重复的逻辑代码提取到这个函数中
+2. Custom Hooks 允许将组件逻辑提取到可重用的函数中。这样可以避免在不同组件中重复编写相同的逻辑代码
+3. Custom Hooks的命名规范是以"use"开头，后面跟一个大写字母
