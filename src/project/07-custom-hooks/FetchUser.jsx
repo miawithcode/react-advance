@@ -1,9 +1,9 @@
-import useFetchUser from "./useFetchUser";
+import useFetch from "./useFetch";
 
 const url = 'https://api.github.com/users/miawithcode';
 
 const FetchUser = () => {
-  const {isLoading, isError, user} = useFetchUser(url);
+  const {isLoading, isError, data: user} = useFetch(url);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
