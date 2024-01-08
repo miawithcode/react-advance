@@ -1,4 +1,4 @@
-import Project from "./project/06-useRef/AvoidFunctionality"
+import Project from "./project/06-useRef/InputFocus"
 
 function App() {
 

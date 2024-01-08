@@ -34,6 +34,10 @@ form input:not([type="checkbox"]) {
   padding: 0 0.5rem;
 }
 
+form input[type="text"]:focus {
+  border: 1px solid cornflowerblue;
+}
+
 form button {
   display: block;
   width: 100%;
