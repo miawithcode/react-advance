@@ -1,4 +1,4 @@
-import Project from "./project/07-custom-hooks/FetchUser"
+import Project from "./project/08-context-api/Navbar"
 
 function App() {
 
