@@ -25,6 +25,7 @@ React notes of React projects.
   - [Leverage JavaScript](#leverage-javascript)
   - [Input](#input)
   - [Custom Hooks](#custom-hooks)
+  - [Context API](#context-api)
 
 ## Getting Started
 
@@ -293,3 +294,39 @@ const Example = () => {
 1. Custom Hooks 的实现方式是创建一个函数，将组件中重复的逻辑代码提取到这个函数中
 2. Custom Hooks 允许将组件逻辑提取到可重用的函数中。这样可以避免在不同组件中重复编写相同的逻辑代码
 3. Custom Hooks的命名规范是以"use"开头，后面跟一个大写字母
+
+### Context API
+
+1. Context API 由两个主要组件组成：Provider 和 Consumer
+  - Provider 用于创建和管理上下文
+  - Consumer 用于从组件内部访问上下文和其数据
+2. 如何使用 Context API
+   1. 创建一个 Context 对象
+      ```jsx
+      import { createContext } from 'react';
+
+      export const NavbarContext = createContext();
+      ```
+    2. 用 Provider 包装组件
+        ```jsx
+        return (
+          <NavbarContext.Provider value={{user, logout}}>
+            <nav>
+              <h5>Context API</h5>
+              <NavLinks />
+            </nav>
+          </NavbarContext.Provider>
+        );
+        ```
+    3. 用 useContext Hook 来访问 prop
+        ```jsx
+        import { useContext } from "react";
+        import { NavbarContext } from "./Navbar";
+
+        const UserContainer = () => {
+
+        const {user, logout} = useContext(NavbarContext);
+
+        // 其他代码
+        }
+        ```
