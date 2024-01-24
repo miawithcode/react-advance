@@ -13,6 +13,7 @@ React notes of React projects.
   - [Conditional Rendering](#conditional-rendering)
   - [Forms](#forms)
   - [useRef](#useref)
+  - [useReducer](#usereducer)
 - [Learning](#learning)
   - [useState](#usestate-1)
   - [onClick](#onclick)
@@ -24,8 +25,11 @@ React notes of React projects.
   - [Ternary Operator](#ternary-operator)
   - [Leverage JavaScript](#leverage-javascript)
   - [Input](#input)
+  - [useRef](#useref-1)
   - [Custom Hooks](#custom-hooks)
   - [Context API](#context-api)
+  - [useReducer](#usereducer-1)
+- [Reference](#reference)
 
 ## Getting Started
 
@@ -112,6 +116,13 @@ React notes of React projects.
 | [Uncontrolled Inputs (useRef)](./src/project/06-useRef/UncontrolledInput.jsx) | 用 useRef 来获取 input 中的值 | `refContainer` 会 access 到 input，JavaScript 中可以用 `.value` 来获取 input 中的值 |
 | [Avoid Functionality](./src/project/06-useRef/AvoidFunctionality.jsx) | 通过改变 useRef 的值，在 initial render 之后不再运行某个功能（在 initial render 时不运行，initial render 后运行） | 因为 useRef 的值是一个 Object，如果要检查 true 或 false，要用到 `current` 属性 |
 | [Input Focus](./src/project/06-useRef/InputFocus.jsx) | 页面初始加载时就将 input 设置为 focus状态 |
+
+### useReducer
+
+| Project | Description | What does it cover |
+|---|---|---|
+| [ReducerBasic](./src/project/09-useReducer/ReducerBasic.jsx) | 用 useReducer 重写 useState 项目中的 [List](./src/project/01-useState/List.jsx) ||
+
 
 ## Learning
 
@@ -274,7 +285,7 @@ const Example = () => {
     const handleChange = (e) => {
       setName(e.target.value);
     }
-  ```
+    ```
 3. 或者不用 `handleChange` 函数，直接在 `onChange` 中写箭头函数
     ```jsx
     <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
@@ -293,7 +304,7 @@ const Example = () => {
 
 1. Custom Hooks 的实现方式是创建一个函数，将组件中重复的逻辑代码提取到这个函数中
 2. Custom Hooks 允许将组件逻辑提取到可重用的函数中。这样可以避免在不同组件中重复编写相同的逻辑代码
-3. Custom Hooks的命名规范是以"use"开头，后面跟一个大写字母
+3. Custom Hooks 的命名规范是以 "use" 开头，后面跟一个大写字母
 
 ### Context API
 
@@ -310,7 +321,7 @@ const Example = () => {
     2. 用 Provider 包装组件
         ```jsx
         return (
-          <NavbarContext.Provider value={{user, logout}}>
+          <NavbarContext.Provider value={{user, logout}}> // value={{user: user, logout: logout}}
             <nav>
               <h5>Context API</h5>
               <NavLinks />
@@ -325,8 +336,16 @@ const Example = () => {
 
         const UserContainer = () => {
 
-        const {user, logout} = useContext(NavbarContext);
+          const {user, logout} = useContext(NavbarContext);
 
-        // 其他代码
+          // 其他代码
         }
         ```
+### useReducer
+
+1. 将 useReducer 视作轻量 Redux (状态管理库)
+
+## Reference
+
+1. [Udemy React Tutorial](https://www.udemy.com/course/react-tutorial-and-projects-course/learn/lecture/36135364#overview)
+2. [Tutorial GitHub Repo](https://github.com/john-smilga/react-course-v3/tree/main/03-advanced-react)

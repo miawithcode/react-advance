@@ -1,4 +1,4 @@
-import Project from "./project/08-context-api/Navbar"
+import Project from "./project/09-useReducer/ReducerBasic"
 
 function App() {
 
