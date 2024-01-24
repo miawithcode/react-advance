@@ -121,7 +121,7 @@ React notes of React projects.
 
 | Project | Description | What does it cover |
 |---|---|---|
-| [ReducerBasic](./src/project/09-useReducer/ReducerBasic.jsx) | 用 useReducer 重写 useState 项目中的 [List](./src/project/01-useState/List.jsx) ||
+| [ReducerBasic](./src/project/09-useReducer/ReducerBasic.jsx) | 用 useReducer 重写 useState 项目中的 [List](./src/project/01-useState/List.jsx) | 如何用 useReducer 来管理、更新状态 |
 
 
 ## Learning
@@ -344,6 +344,53 @@ const Example = () => {
 ### useReducer
 
 1. 将 useReducer 视作轻量 Redux (状态管理库)
+2. 使用 useReducer 需要两个参数：provider 和 default state
+    ```jsx
+    const defaultState = {
+      people: data,
+      // isLoading: true,
+      // isError: false,
+    }
+
+    const reducer = () => {
+      // 在这里控制所有状态
+    }
+
+    const App = () => {
+      const [state, dispatch] = useReducer(reducer, defaultState)
+    }
+
+    export default App;
+    ```
+3. 用 `dispatch` 更新状态变量，必须传入 `{type: '...'}`
+    ```jsx
+    const reducer = (state, action) => {
+      // 在这里控制所有状态
+      if (action.type === 'CLEAR_LIST') {
+        return { ...state, people: [] };
+      }
+    }
+
+    // 其他代码
+    const clearList = () => {
+      dispatch({type: 'CLEAR_LIST'})
+    }
+    ```
+4. 将 action 设置成变量
+    ```jsx
+    const CLEAR_LIST = 'CLEAR_LIST';
+
+    const reducer = (state, action) => {
+      if (action.type === CLEAR_LIST) {
+        return { ...state, people: [] };
+      }
+    }
+
+    const clearList = () => {
+      dispatch({type: CLEAR_LIST})
+    }
+    ```
+
 
 ## Reference
 
