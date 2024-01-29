@@ -29,6 +29,7 @@ React notes of React projects.
   - [Custom Hooks](#custom-hooks)
   - [Context API](#context-api)
   - [useReducer](#usereducer-1)
+  - [useCallback](#usecallback)
 - [Reference](#reference)
 
 ## Getting Started
@@ -391,6 +392,41 @@ const Example = () => {
     }
     ```
 
+
+### useCallback
+
+useCallback 的 Common Use
+1. 一般来说，`fetchData` 函数不要写在 `useEffect` 里
+    ```jsx
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(url);
+          const users = await response.json();
+          setUsers(users);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchData();
+    }, []);
+    ```
+2. 把 `fetchData` 函数写在 useCallback 里，可以让 `fetchData` 函数只创建一次
+    ```jsx
+    const fetchData = useCallback(async () => {
+      try {
+        const response = await fetch(url);
+        const users = await response.json();
+        setUsers(users);
+      } catch (error) {
+        console.log(error);
+      }
+    },[]) 
+
+    useEffect(() => {
+      fetchData();
+    }, [fetchData]);
+    ```
 
 ## Reference
 
