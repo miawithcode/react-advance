@@ -432,3 +432,4 @@ useCallback 的 Common Use
 
 1. [Udemy React Tutorial](https://www.udemy.com/course/react-tutorial-and-projects-course/learn/lecture/36135364#overview)
 2. [Tutorial GitHub Repo](https://github.com/john-smilga/react-course-v3/tree/main/03-advanced-react)
+3. [React Performace](https://github.com/john-smilga/react-course-v3/tree/main/03-advanced-react/src/tutorial/11-performance/final)
